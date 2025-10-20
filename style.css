@@ -1,0 +1,401 @@
+/* === GLOBAL THEME === */
+:root {
+  --pink: #ff9ecb;
+  --pink-dark: #ff5fa2;
+  --white: #fff;
+  --shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: var(--white);
+  color: #444;
+  overflow-x: hidden;
+}
+
+/* === HEADER === */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: var(--pink);
+  box-shadow: var(--shadow);
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 99;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.4rem;
+  color: var(--white);
+}
+
+.menu-toggle {
+  display: none;
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.menu li a {
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.menu li a:hover {
+  color: #ffe6f0;
+}
+
+/* === HERO SECTION === */
+.home {
+  height: 100vh;
+  background: linear-gradient(180deg, var(--pink) 40%, var(--white) 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.home h1 {
+  font-size: 2rem;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.home p {
+  color: #fff;
+  max-width: 400px;
+  margin-bottom: 20px;
+}
+
+.btn-primary {
+  background: var(--white);
+  color: var(--pink-dark);
+  padding: 10px 25px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: var(--shadow);
+  transition: 0.3s;
+}
+
+.btn-primary:hover {
+  background: var(--pink-dark);
+  color: var(--white);
+}
+
+/* === FILTER BOX === */
+.search {
+  padding: 100px 20px 60px;
+  text-align: center;
+}
+
+.search h2 {
+  margin-bottom: 15px;
+  color: var(--pink-dark);
+}
+
+.filter-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.filter-box select,
+.btn-search {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 0.9rem;
+}
+
+.btn-search {
+  background: var(--pink);
+  color: var(--white);
+  cursor: pointer;
+  transition: 0.3s;
+  border: none;
+}
+
+.btn-search:hover {
+  background: var(--pink-dark);
+}
+
+/* === PROFILE SWIPE AREA === */
+.profile-area {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  max-width: 350px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.profile-card {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: var(--white);
+  border-radius: 20px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  touch-action: pan-y;
+}
+
+.profile-card img {
+  width: 100%;
+  height: 60%;
+  object-fit: cover;
+}
+
+.profile-card .info {
+  padding: 15px;
+  text-align: left;
+}
+
+.profile-card .info h3 {
+  color: var(--pink-dark);
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+.profile-card .info p {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-around;
+  padding: 15px 0;
+}
+
+.actions button {
+  border: none;
+  background: none;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.actions .btn-like:hover {
+  transform: scale(1.2);
+  color: var(--pink-dark);
+}
+
+.actions .btn-dislike:hover {
+  transform: scale(1.2);
+  color: #777;
+}
+
+/* === SWIPE ANIMATION === */
+.profile-card.swipe-left {
+  transform: translateX(-120%) rotate(-15deg);
+  opacity: 0;
+}
+
+.profile-card.swipe-right {
+  transform: translateX(120%) rotate(15deg);
+  opacity: 0;
+}
+
+/* === ABOUT SECTION === */
+.about {
+  padding: 60px 20px;
+  background: #fff0f6;
+}
+
+.about h2 {
+  color: var(--pink-dark);
+  margin-bottom: 10px;
+}
+
+.about p {
+  color: #444;
+  max-width: 500px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* === FOOTER === */
+.footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+  background: var(--pink);
+  color: var(--white);
+}
+
+
+
+
+/* === RESPONSIVE DESIGN === */
+@media (max-width: 768px) {
+  .menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 180px;
+
+    /* Glassy pink */
+    background: rgba(255, 192, 203, 0.70); 
+    backdrop-filter: blur(10px);
+    border-radius: 12px; 
+    padding: 10px 0;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .menu.show {
+    display: flex;
+  }
+
+  .menu a {
+    color: #ff1493; /* pink bold */
+    font-weight: 700; /* bold */
+    text-decoration: none;
+    padding: 10px 20px;
+    transition: background 0.3s ease;
+    border-radius: 8px; /* sudut tiap item */
+  }
+
+  .menu a:hover {
+    background: rgba(255, 20, 147, 0.1); /* hover effect ringan */
+  }
+
+  .profile-area {
+    height: 420px;
+  }
+
+  .profile-card img {
+    height: 55%;
+  }
+}
+
+
+/* === TABLET & DESKTOP GRID PROFILES === */
+@media (min-width: 769px) {
+  .profile-area {
+    position: static;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    max-width: 1200px;
+    margin: 0 auto 50px;
+    height: auto;
+    padding: 20px;
+  }
+
+  .profile-card {
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease;
+  }
+
+  .profile-card img {
+    height: 200px;
+  }
+
+  .profile-card .info h3 {
+    font-size: 1.3rem;
+  }
+
+  .profile-card .info p {
+    font-size: 1rem;
+  }
+
+  .actions button {
+    font-size: 2rem;
+  }
+
+  .profile-card:hover {
+    transform: translateY(-5px);
+  }
+
+  .about {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 20px;
+  }
+
+  .about p {
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+    font-size: 1.1rem;
+  }
+
+  .about h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+
+  .home {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .home h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+  }
+
+  .home p {
+    max-width: 600px;
+    font-size: 1.2rem;
+    margin-bottom: 25px;
+  }
+
+  .btn-primary {
+    font-size: 1.2rem;
+    padding: 12px 30px;
+  }
+  
+  
+}

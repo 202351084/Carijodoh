@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chat Jodohmu 💌 | jodohku.id</title>
+  <link rel="stylesheet" href="chat.css">
+</head>
+<body>
+  <div class="chat-container">
+    <header class="chat-header">
+      <button class="back-btn" id="backBtn">←</button>
+      <div class="header-text">
+        <h1>💌 Chat Jodohmu</h1>
+        <p>Ngobrol santai & temukan kecocokan 💕</p>
+      </div>
+    </header>
+
+    <!-- Info profile -->
+    <div class="profile-info" id="profile-info">
+      <!-- Nama & info profil muncul di sini -->
+    </div>
+
+    <!-- Chat box -->
+    <div class="chat-box" id="chat-box">
+      <div class="bot-msg">Hai! Aku Cupid ❤️ Ayo mulai obrolan seru~</div>
+    </div>
+
+    <!-- Input chat -->
+    <div class="chat-input">
+      <input type="text" id="messageInput" placeholder="Tulis pesanmu di sini...">
+      <button id="sendBtn">Kirim</button>
+    </div>
+  </div>
+
+  <!-- POPUP EMAIL -->
+  <div class="email-popup-overlay" id="emailPopup">
+    <div class="email-popup">
+      <div class="popup-header">
+        <h2>💌 Mau lanjut terhubung?</h2>
+        <span class="close-popup" id="closePopup">&times;</span>
+      </div>
+      <p>Masukkan emailmu untuk mencoba terhubung lebih lanjut dengan profil ini:</p>
+      <input type="email" id="userEmail" placeholder="email@example.com">
+      <div class="popup-actions">
+        <button class="confirm-btn" id="saveEmailBtn">Kirim</button>
+        <button class="cancel-btn" id="cancelEmailBtn">Batal</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- POPUP NOTIFIKASI EMAIL -->
+  <div class="email-notif" id="emailNotif">
+    Doi bakal balas ngehubungi balik kalo dia serius sama kamu 💘
+  </div>
+
+  <script src="chat.js"></script>
+</body>
+</html>

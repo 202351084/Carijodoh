@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jodohku.id 💘 | Temukan Pasangan Hidupmu</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="logo">💘 Jodohku.id</div>
+    <nav class="nav">
+      <button id="menu-toggle" class="menu-toggle">☰</button>
+      <ul id="menu" class="menu">
+        <li><a href="#home">Beranda</a></li>
+        <li><a href="#search">Cari Jodoh</a></li>
+        <li><a href="#about">Tentang</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="home" class="home">
+    <div class="hero">
+      <h1>Temukan Cinta Sejatimu 💞</h1>
+      <p>Swipe kanan kalau suka, kiri kalau tidak.<br> Siapa tahu jodohmu ada di sini!</p>
+      <a href="#search" class="btn-primary">Mulai Mencari</a>
+    </div>
+  </section>
+
+  <section id="search" class="search">
+    <h2>Cari Berdasarkan Kriteria</h2>
+    <div class="filter-box">
+      <select id="gender">
+        <option value="">Jenis Kelamin</option>
+        <option value="male">Laki-laki</option>
+        <option value="female">Perempuan</option>
+      </select>
+
+      <select id="age">
+        <option value="">Umur</option>
+        <option value="18-25">18 - 25</option>
+        <option value="26-35">26 - 35</option>
+        <option value="36-45">36 - 45</option>
+        <option value="46+">46+</option>
+      </select>
+
+      <select id="job">
+        <option value="">Pekerjaan</option>
+        <option value="mahasiswa">Mahasiswa</option>
+        <option value="karyawan">Karyawan</option>
+        <option value="wirausaha">Wirausaha</option>
+        <option value="freelancer">Freelancer</option>
+      </select>
+
+      <select id="education">
+        <option value="">Pendidikan</option>
+        <option value="SMA">SMA / SMK</option>
+        <option value="D3">Diploma (D3)</option>
+        <option value="S1">Sarjana (S1)</option>
+        <option value="S2">Magister (S2)</option>
+      </select>
+
+      <select id="location">
+        <option value="">Lokasi</option>
+        <option value="jakarta">Jakarta</option>
+        <option value="bandung">Bandung</option>
+        <option value="surabaya">Surabaya</option>
+        <option value="yogyakarta">Yogyakarta</option>
+        <option value="bali">Bali</option>
+      </select>
+
+      <button id="searchBtn" class="btn-search">Cari 💘</button>
+    </div>
+
+    <div id="profile-area" class="profile-area">
+      <!-- Kartu profil akan muncul di sini lewat JS -->
+      <div class="profile-card">
+        <img src="img/female1.jpg" alt="Profil">
+        <div class="info">
+          <h3>Dinda Putri (24)</h3>
+          <p>👩‍🎓 S1 Psikologi - Universitas Indonesia</p>
+          <p>📍 Jakarta | 💼 Karyawan</p>
+        </div>
+        <div class="actions">
+          <button class="btn-dislike">❌</button>
+          <button class="btn-like">💖</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="about">
+    <h2>Tentang Jodohku.id</h2>
+    <p>
+      Jodohku.id adalah platform pencari jodoh berbasis kecocokan minat, pendidikan, dan kepribadian.
+      Semua profil disajikan untuk kamu temukan dengan cara menyenangkan: cukup <b>swipe</b> kiri atau kanan!
+    </p>
+  </section>
+
+  <footer class="footer">
+    <p>© 2025 Jodohku.id | Dibuat dengan 💖 untuk para pencari cinta</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
